@@ -1,7 +1,7 @@
 package service
 
 import (
-	"ms-entity/internal/app/repository"
+	"ms-entity/internal/infra/repository"
 	"net/http"
 
 	"github.com/labstack/echo/v4"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"ms-entity/internal/app/repository"
 	productService "ms-entity/internal/app/service/product"
+	"ms-entity/internal/infra/repository"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

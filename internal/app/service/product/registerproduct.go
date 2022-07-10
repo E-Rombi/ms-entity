@@ -3,7 +3,7 @@ package service
 import (
 	"errors"
 	"ms-entity/internal/app/model"
-	"ms-entity/internal/app/repository"
+	"ms-entity/internal/infra/repository"
 	"net/http"
 
 	"github.com/labstack/echo/v4"

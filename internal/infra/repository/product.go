@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"ms-entity/internal/app/model"
+	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -28,7 +29,7 @@ type ProductRepository struct {
 }
 
 func NewProductRepository() *ProductRepository {
-	clientOptions := options.Client().ApplyURI("mongodb://root:root@localhost:27017/")
+	clientOptions := options.Client().ApplyURI("mongodb://root:root@localhost:27017/").SetConnectTimeout(5 * time.Second)
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
 		log.Fatal(err)
